@@ -17,6 +17,11 @@
     <description>Docker Registry Authenticator Parent POM</description>
     <url>https://github.com/graysonkuhns/docker-regauth</url>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <developers>
         <developer>
             <id>gkuhns</id>
