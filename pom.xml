@@ -8,6 +8,10 @@
     <artifactId>docker-regauth-project</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 
+    <modules>
+        <module>core</module>
+    </modules>
+
     <packaging>pom</packaging>
     <name>Docker Registry Authenticator Project</name>
     <description>Docker Registry Authenticator Parent POM</description>
