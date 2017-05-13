@@ -10,6 +10,8 @@
 
     <modules>
         <module>core</module>
+        <module>docker</module>
+        <module>network</module>
     </modules>
 
     <packaging>pom</packaging>
