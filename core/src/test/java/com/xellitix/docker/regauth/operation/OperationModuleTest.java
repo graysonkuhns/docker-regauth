@@ -18,4 +18,14 @@ public class OperationModuleTest {
     public void getGetCredentialRequestFactory() {
         injector.getInstance(GetCredentialRequestFactory.class);
     }
+
+    @Test
+    public void getStoreCredentialRequestFactoryTest() {
+        injector.getInstance(StoreCredentialRequestFactory.class);
+    }
+
+    @Test
+    public void getDeleteCredentialRequestFactoryTest() {
+        injector.getInstance(DeleteCredentialRequestFactory.class);
+    }
 }

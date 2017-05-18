@@ -15,9 +15,19 @@ public class OperationModule extends AbstractModule {
      */
     @Override
     protected void configure() {
-        // Get credential request factory
+        // Get credential request
         install(new FactoryModuleBuilder()
             .implement(GetCredentialRequest.class, DefaultGetCredentialRequest.class)
             .build(GetCredentialRequestFactory.class));
+
+        // Store credential request
+        install(new FactoryModuleBuilder()
+            .implement(StoreCredentialRequest.class, DefaultStoreCredentialRequest.class)
+            .build(StoreCredentialRequestFactory.class));
+
+        // Delete credential request
+        install(new FactoryModuleBuilder()
+            .implement(DeleteCredentialRequest.class, DefaultDeleteCredentialRequest.class)
+            .build(DeleteCredentialRequestFactory.class));
     }
 }
