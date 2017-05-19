@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "profileName": {
+      "backend": "aws-ecr",
+      "registries": [
+        "https://registry.company.com"
+      ]
+    }
+  }
+}
