@@ -16,7 +16,7 @@ public class MalformedConfigurationExceptionTest {
 
     // Constants
     private static final String ELEMENT = "ENV_VAR";
-    private static final String EXPECTATION = "defined";
+    private static final String EXPECTATION = "be defined";
     private static final String MESSAGE =
             "Expected the configuration value \"ENV_VAR\" to be defined";
 

@@ -2,8 +2,10 @@ package com.xellitix.docker.regauth.config;
 
 import com.xellitix.docker.regauth.credentialstore.CredentialStore;
 import com.xellitix.docker.registry.DockerRegistry;
+import com.xellitix.docker.registry.DockerRegistryMatcher;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -11,7 +13,7 @@ import java.util.Set;
  *
  * @author Grayson Kuhns
  */
-public interface Profile extends Serializable{
+public interface Profile extends Serializable {
 
     /**
      * Gets the name.
@@ -28,9 +30,9 @@ public interface Profile extends Serializable{
     CredentialStore getCredentialStore();
 
     /**
-     * Gets the Docker registries.
+     * Gets the {@link DockerRegistryMatcher}s.
      *
-     * @return The Docker registries.
+     * @return The {@link DockerRegistryMatcher}s.
      */
-    Set<DockerRegistry> getDockerRegistries();
+    List<DockerRegistryMatcher> getDockerRegistryMatchers();
 }

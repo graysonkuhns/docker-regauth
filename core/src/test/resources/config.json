@@ -3,7 +3,7 @@
     "profileName": {
       "backend": "aws-ecr",
       "registries": [
-        "https://registry.company.com"
+        "https:\\/\\/registry\\.company\\.com"
       ]
     }
   }

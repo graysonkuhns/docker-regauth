@@ -9,7 +9,7 @@ public class MalformedConfigurationException extends Exception {
 
     // Constants
     private static final String FAILED_EXPECTATION_MSG_TEMPLATE =
-            "Expected the configuration value \"%s\" to be %s";
+            "Expected the configuration value \"%s\" to %s";
 
     /**
      * Constructor.

@@ -1,12 +1,13 @@
 package com.xellitix.docker.regauth.config;
 
-import com.xellitix.docker.regauth.credential.Credential;
 import com.xellitix.docker.regauth.credentialstore.CredentialStore;
-import com.xellitix.docker.registry.DockerRegistry;
+import com.xellitix.docker.registry.DockerRegistryMatcher;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -24,7 +25,7 @@ public class DefaultProfileTest {
 
     // Fixtures
     private CredentialStore credentialStore;
-    private Set<DockerRegistry> dockerRegistries;
+    private List<DockerRegistryMatcher> registryMatchers;
     private DefaultProfile profile;
 
     @Test
@@ -44,11 +45,11 @@ public class DefaultProfileTest {
     }
 
     @Test
-    public void getDockerRegistriesTest() {
+    public void getDockerRegistryMatchersTest() {
         assertThat(profile
-                .getDockerRegistries())
+                .getDockerRegistryMatchers())
                 .isNotNull()
-                .isEqualTo(dockerRegistries);
+                .isEqualTo(registryMatchers);
     }
 
     @Before
@@ -57,9 +58,9 @@ public class DefaultProfileTest {
         credentialStore = mock(CredentialStore.class);
 
         // Create the docker registries
-        dockerRegistries = new HashSet<>();
+        registryMatchers = new ArrayList<>();
 
         // Create the profile
-        profile = new DefaultProfile(NAME, credentialStore, dockerRegistries);
+        profile = new DefaultProfile(NAME, credentialStore, registryMatchers);
     }
 }

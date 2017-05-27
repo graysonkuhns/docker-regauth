@@ -3,8 +3,9 @@ package com.xellitix.docker.regauth.config;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
 import com.xellitix.docker.regauth.credentialstore.CredentialStore;
-import com.xellitix.docker.registry.DockerRegistry;
+import com.xellitix.docker.registry.DockerRegistryMatcher;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -17,24 +18,24 @@ public class DefaultProfile implements Profile {
     // Properties
     private final String name;
     private final CredentialStore credentialStore;
-    private final Set<DockerRegistry> dockerRegistries;
+    private final List<DockerRegistryMatcher> registryMatchers;
 
     /**
      * Constructor.
      *
      * @param name The name.
      * @param credentialStore The {@link CredentialStore}.
-     * @param dockerRegistries The Docker Registries.
+     * @param registryMatchers The {@link DockerRegistryMatcher}s.
      */
     @Inject
     DefaultProfile(
             @Assisted final String name,
             @Assisted final CredentialStore credentialStore,
-            @Assisted final Set<DockerRegistry> dockerRegistries) {
+            @Assisted final List<DockerRegistryMatcher> registryMatchers) {
 
         this.name = name;
         this.credentialStore = credentialStore;
-        this.dockerRegistries = dockerRegistries;
+        this.registryMatchers = registryMatchers;
     }
 
     /**
@@ -58,12 +59,12 @@ public class DefaultProfile implements Profile {
     }
 
     /**
-     * Gets the Docker registries.
+     * Gets the {@link DockerRegistryMatcher}s.
      *
-     * @return The Docker registries.
+     * @return The {@link DockerRegistryMatcher}s.
      */
     @Override
-    public Set<DockerRegistry> getDockerRegistries() {
-        return dockerRegistries;
+    public List<DockerRegistryMatcher> getDockerRegistryMatchers() {
+        return registryMatchers;
     }
 }
