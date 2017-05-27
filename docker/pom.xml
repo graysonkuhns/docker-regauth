@@ -17,6 +17,13 @@
     <description>Docker Data Models</description>
 
     <dependencies>
+        <!-- Project modules -->
+        <dependency>
+            <groupId>com.xellitix.commons</groupId>
+            <artifactId>network</artifactId>
+            <version>0.1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- Core dependencies -->
         <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
         <dependency>
