@@ -1,4 +1,4 @@
-package com.xellitix.docker.registry;
+package com.xellitix.commons.docker.registry;
 
 /**
  * {@link DockerRegistryMatcher} parser.

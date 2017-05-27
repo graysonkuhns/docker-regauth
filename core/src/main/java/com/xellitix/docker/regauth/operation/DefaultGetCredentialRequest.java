@@ -2,7 +2,7 @@ package com.xellitix.docker.regauth.operation;
 
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
-import com.xellitix.docker.registry.DockerRegistry;
+import com.xellitix.commons.docker.registry.DockerRegistry;
 
 /**
  * Default {@link GetCredentialRequest} implementation.

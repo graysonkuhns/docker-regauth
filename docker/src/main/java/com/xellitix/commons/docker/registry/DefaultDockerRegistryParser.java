@@ -1,4 +1,4 @@
-package com.xellitix.docker.registry;
+package com.xellitix.commons.docker.registry;
 
 import com.google.inject.Inject;
 import com.xellitix.commons.network.url.URLFactory;

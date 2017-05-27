@@ -1,4 +1,4 @@
-package com.xellitix.docker.registry;
+package com.xellitix.commons.docker.registry;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.assistedinject.FactoryModuleBuilder;

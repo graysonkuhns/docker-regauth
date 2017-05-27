@@ -3,10 +3,9 @@ package com.xellitix.docker.regauth.config;
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;
 import com.xellitix.docker.regauth.credentialstore.CredentialStore;
-import com.xellitix.docker.registry.DockerRegistryMatcher;
+import com.xellitix.commons.docker.registry.DockerRegistryMatcher;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Default {@link Profile} implementation.

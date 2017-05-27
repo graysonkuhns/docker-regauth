@@ -3,9 +3,8 @@ package com.xellitix.docker.regauth.config.parsing;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.inject.Inject;
 import com.xellitix.commons.parsing.FailedExpectationException;
-import com.xellitix.docker.registry.DockerRegistry;
-import com.xellitix.docker.registry.DockerRegistryMatcher;
-import com.xellitix.docker.registry.DockerRegistryMatcherParser;
+import com.xellitix.commons.docker.registry.DockerRegistryMatcher;
+import com.xellitix.commons.docker.registry.DockerRegistryMatcherParser;
 
 import java.util.*;
 

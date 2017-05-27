@@ -1,7 +1,7 @@
 package com.xellitix.docker.regauth.operation;
 
 import com.xellitix.docker.regauth.credential.Credential;
-import com.xellitix.docker.registry.DockerRegistry;
+import com.xellitix.commons.docker.registry.DockerRegistry;
 
 /**
  * {@link StoreCredentialRequest} factory.

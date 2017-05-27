@@ -1,4 +1,4 @@
-package com.xellitix.docker.registry;
+package com.xellitix.commons.docker.registry;
 
 import com.google.inject.Inject;
 import com.google.inject.assistedinject.Assisted;

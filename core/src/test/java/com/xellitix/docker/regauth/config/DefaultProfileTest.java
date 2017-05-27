@@ -1,14 +1,12 @@
 package com.xellitix.docker.regauth.config;
 
 import com.xellitix.docker.regauth.credentialstore.CredentialStore;
-import com.xellitix.docker.registry.DockerRegistryMatcher;
+import com.xellitix.commons.docker.registry.DockerRegistryMatcher;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

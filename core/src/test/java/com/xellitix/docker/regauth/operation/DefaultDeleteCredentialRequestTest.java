@@ -1,6 +1,6 @@
 package com.xellitix.docker.regauth.operation;
 
-import com.xellitix.docker.registry.DockerRegistry;
+import com.xellitix.commons.docker.registry.DockerRegistry;
 import org.junit.Before;
 import org.junit.Test;
 
