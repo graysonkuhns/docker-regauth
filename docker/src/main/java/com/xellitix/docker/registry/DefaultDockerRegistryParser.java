@@ -15,19 +15,19 @@ import java.net.URL;
 public class DefaultDockerRegistryParser implements DockerRegistryParser {
 
     // Dependencies
-    private final DockerRegistryFactory registryFactory;
     private final URLFactory urlFactory;
+    private final DockerRegistryFactory registryFactory;
 
     /**
      * Constructor.
      *
-     * @param registryFactory The {@link DockerRegistryFactory}.
      * @param urlFactory The {@link URLFactory}.
+     * @param registryFactory The {@link DockerRegistryFactory}.
      */
     @Inject
     DefaultDockerRegistryParser(
-            final DockerRegistryFactory registryFactory,
-            final URLFactory urlFactory) {
+            final URLFactory urlFactory,
+            final DockerRegistryFactory registryFactory) {
 
         this.registryFactory = registryFactory;
         this.urlFactory = urlFactory;
@@ -47,10 +47,10 @@ public class DefaultDockerRegistryParser implements DockerRegistryParser {
         try {
             url = urlFactory.create(endpointUrl);
         } catch (MalformedURLException ex) {
-            throw new IllegalArgumentException();
+            throw new FailedExpectationException("endpointUrl", "a valid URL");
         }
 
         // Create the docker registry
-        return null;
+        return registryFactory.create(url);
     }
 }
