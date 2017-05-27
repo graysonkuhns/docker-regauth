@@ -2,6 +2,7 @@ package com.xellitix.docker.registry;
 
 import com.google.inject.Inject;
 import com.xellitix.commons.network.url.URLFactory;
+import com.xellitix.commons.parsing.FailedExpectationException;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -37,10 +38,10 @@ public class DefaultDockerRegistryParser implements DockerRegistryParser {
      *
      * @param endpointUrl The endpoint URL.
      * @return The parsed {@link DockerRegistry}.
-     * @throws IllegalArgumentException If an error occurs while parsing.
+     * @throws FailedExpectationException If an error occurs while parsing.
      */
     @Override
-    public DockerRegistry parse(final String endpointUrl) throws IllegalArgumentException {
+    public DockerRegistry parse(final String endpointUrl) throws FailedExpectationException {
         // Create the URL
         URL url;
         try {

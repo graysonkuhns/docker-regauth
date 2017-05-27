@@ -1,5 +1,7 @@
 package com.xellitix.docker.registry;
 
+        import com.xellitix.commons.parsing.FailedExpectationException;
+
 /**
  * {@link DockerRegistry} parser.
  *
@@ -12,7 +14,7 @@ public interface DockerRegistryParser {
      *
      * @param endpointUrl The endpoint URL.
      * @return The parsed {@link DockerRegistry}.
-     * @throws IllegalArgumentException If an error occurs while parsing.
+     * @throws FailedExpectationException If an error occurs while parsing.
      */
-    DockerRegistry parse(String endpointUrl) throws IllegalArgumentException;
+    DockerRegistry parse(String endpointUrl) throws FailedExpectationException;
 }

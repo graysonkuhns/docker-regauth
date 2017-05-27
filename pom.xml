@@ -12,6 +12,7 @@
         <module>core</module>
         <module>docker</module>
         <module>network</module>
+        <module>parsing</module>
     </modules>
 
     <packaging>pom</packaging>

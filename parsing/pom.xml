@@ -11,63 +11,12 @@
     </parent>
 
     <groupId>com.xellitix.commons</groupId>
-    <artifactId>docker</artifactId>
+    <artifactId>parsing</artifactId>
     <packaging>jar</packaging>
-    <name>Docker Data Models</name>
-    <description>Docker Data Models</description>
+    <name>Parsing Utils</name>
+    <description>Parsing utilities</description>
 
     <dependencies>
-        <!-- Project modules -->
-        <dependency>
-            <groupId>com.xellitix.commons</groupId>
-            <artifactId>network</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.xellitix.commons</groupId>
-            <artifactId>parsing</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <!-- Core dependencies -->
-        <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.google.inject.extensions/guice-assistedinject -->
-        <dependency>
-            <groupId>com.google.inject.extensions</groupId>
-            <artifactId>guice-assistedinject</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.google.inject.extensions/guice-multibindings -->
-        <dependency>
-            <groupId>com.google.inject.extensions</groupId>
-            <artifactId>guice-multibindings</artifactId>
-        </dependency>
-
-        <!-- Logging dependencies -->
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-        </dependency>
-
         <!-- Test dependencies -->
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
