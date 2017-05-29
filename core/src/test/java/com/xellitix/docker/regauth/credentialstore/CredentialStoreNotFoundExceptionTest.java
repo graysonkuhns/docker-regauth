@@ -1,6 +1,5 @@
 package com.xellitix.docker.regauth.credentialstore;
 
-import com.xellitix.docker.regauth.credential.Credential;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
