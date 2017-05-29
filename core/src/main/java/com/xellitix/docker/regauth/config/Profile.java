@@ -21,11 +21,11 @@ public interface Profile extends Serializable {
     String getName();
 
     /**
-     * Gets the {@link CredentialStore} {@link Class}.
+     * Gets the {@link CredentialStore} ID.
      *
-     * @return The {@link CredentialStore} {@link Class}.
+     * @return The {@link CredentialStore} ID.
      */
-    Class<? extends CredentialStore> getCredentialStoreClass();
+    String getCredentialStoreId();
 
     /**
      * Gets the {@link DockerRegistryMatcher}s.

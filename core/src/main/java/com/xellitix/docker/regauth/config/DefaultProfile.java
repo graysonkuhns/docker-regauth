@@ -16,24 +16,24 @@ public class DefaultProfile implements Profile {
 
     // Properties
     private final String name;
-    private final Class<? extends CredentialStore> credentialStore;
+    private final String credentialStoreId;
     private final List<DockerRegistryMatcher> registryMatchers;
 
     /**
      * Constructor.
      *
      * @param name The name.
-     * @param credentialStore The {@link CredentialStore} {@link Class}.
+     * @param credentialStoreId The {@link CredentialStore} ID.
      * @param registryMatchers The {@link DockerRegistryMatcher}s.
      */
     @Inject
     DefaultProfile(
             @Assisted final String name,
-            @Assisted final Class<? extends CredentialStore> credentialStore,
+            @Assisted final String credentialStoreId,
             @Assisted final List<DockerRegistryMatcher> registryMatchers) {
 
         this.name = name;
-        this.credentialStore = credentialStore;
+        this.credentialStoreId = credentialStoreId;
         this.registryMatchers = registryMatchers;
     }
 
@@ -48,13 +48,13 @@ public class DefaultProfile implements Profile {
     }
 
     /**
-     * Gets the {@link CredentialStore} {@link Class}.
+     * Gets the {@link CredentialStore} ID.
      *
-     * @return The {@link CredentialStore} {@link Class}.
+     * @return The {@link CredentialStore} ID.
      */
     @Override
-    public Class<? extends CredentialStore> getCredentialStoreClass() {
-        return credentialStore;
+    public String getCredentialStoreId() {
+        return credentialStoreId;
     }
 
     /**

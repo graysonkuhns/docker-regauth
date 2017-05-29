@@ -20,9 +20,9 @@ public class DefaultProfileTest {
 
     // Constants
     private static final String NAME = "profileName";
+    private static final String CREDENTIAL_STORE_ID = "credStore";
 
     // Fixtures
-    private Class<? extends CredentialStore> credentialStore;
     private List<DockerRegistryMatcher> registryMatchers;
     private DefaultProfile profile;
 
@@ -37,9 +37,9 @@ public class DefaultProfileTest {
     @Test
     public void getCredentialStoreTest() {
         assertThat(profile
-                .getCredentialStoreClass())
+                .getCredentialStoreId())
                 .isNotNull()
-                .isEqualTo(credentialStore);
+                .isEqualTo(CREDENTIAL_STORE_ID);
     }
 
     @Test
@@ -52,13 +52,10 @@ public class DefaultProfileTest {
 
     @Before
     public void setUp() {
-        // Mock the credential store
-        credentialStore = CredentialStore.class;
-
         // Create the docker registries
         registryMatchers = new ArrayList<>();
 
         // Create the profile
-        profile = new DefaultProfile(NAME, credentialStore, registryMatchers);
+        profile = new DefaultProfile(NAME, CREDENTIAL_STORE_ID, registryMatchers);
     }
 }
