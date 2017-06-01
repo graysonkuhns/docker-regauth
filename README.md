@@ -1,12 +1,12 @@
 # Docker Registry Authenticator
 
+(Initial development branch)
+
 Rule based Docker external credential store.
 Main purpose is retrieving fresh auth tokens for Amazon ECR and Google Container Registry.
 
 External Docker credential store API briefly described here:
 https://github.com/docker/docker-credential-helpers
-
-(Initial development branch)
 
 Project is organized in modules. Many modules will become independent artifacts in groupId com.xellitix.commons later on.
 
