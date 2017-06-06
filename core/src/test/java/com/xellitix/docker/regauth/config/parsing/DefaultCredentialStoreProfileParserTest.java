@@ -40,6 +40,14 @@ public class DefaultCredentialStoreProfileParserTest {
     private DefaultCredentialStoreProfileParser parser;
 
     @Test
+    public void getCredentialStoreIdTest() {
+        assertThat(parser
+                .getCredentialStoreId())
+                .isNotNull()
+                .isEqualTo("N/A");
+    }
+
+    @Test
     public void parseProfileTest() throws Exception {
         assertThat(parser
                 .parse(NAME, CREDENTIAL_STORE_ID, registryMatchers, profileNode))

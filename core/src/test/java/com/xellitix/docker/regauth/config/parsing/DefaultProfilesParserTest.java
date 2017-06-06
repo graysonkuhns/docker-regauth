@@ -9,8 +9,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.mock;
@@ -42,7 +40,6 @@ public class DefaultProfilesParserTest {
 
     // Fixtures
     private ObjectNode configNode;
-    private ObjectNode profilesNode;
 
     private ObjectNode profileOneNode;
     private ObjectNode profileTwoNode;
@@ -111,7 +108,7 @@ public class DefaultProfilesParserTest {
         configNode = new ObjectMapper()
                 .getNodeFactory()
                 .objectNode();
-        profilesNode = configNode.putObject(PROFILES_KEY);
+        ObjectNode profilesNode = configNode.putObject(PROFILES_KEY);
         profileOneNode = profilesNode.putObject(PROFILE_NAME_ONE);
         profileTwoNode = profilesNode.putObject(PROFILE_NAME_TWO);
 

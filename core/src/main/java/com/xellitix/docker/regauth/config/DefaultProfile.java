@@ -28,8 +28,8 @@ public class DefaultProfile implements Profile {
      */
     @Inject
     DefaultProfile(
-            @Assisted final String name,
-            @Assisted final String credentialStoreId,
+            @Assisted("name") final String name,
+            @Assisted("credentialStoreId") final String credentialStoreId,
             @Assisted final List<DockerRegistryMatcher> registryMatchers) {
 
         this.name = name;
